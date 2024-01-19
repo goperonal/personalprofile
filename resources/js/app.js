@@ -1,10 +1,11 @@
 import './bootstrap';
+import 'flowbite';
 
-import Alpine from 'alpinejs'
-import Persist from '@alpinejs/persist'
+import Alpine from 'alpinejs';
+import Persist from '@alpinejs/persist';
 
-Alpine.plugin(Persist)
+Alpine.plugin(Persist);
 
-Alpine.start()
+Alpine.start();
 
-window.Alpine = Alpine
+window.Alpine = Alpine;

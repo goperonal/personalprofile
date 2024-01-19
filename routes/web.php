@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +22,12 @@ Route::get('/', function () {
 Route::get('/projects', function () {
     return view('pages/projectpage');
 });
+Route::get('/articles', ArticleController::class);
+Route::get('/articles/{post:slug}', [PostController::class, 'show' ])->name('view');
 Route::get('/uses', function () {
     return view('pages/usespage');
 });
+
 
 
 
